@@ -22,7 +22,7 @@ class LandingPage extends Component {
       this.rightSide.classList.add('right');
     }
 
-    this.setState(prevstate => ({
+    this.setState((prevstate) => ({
       isLogginActive: !prevstate.isLogginActive,
     }));
   }
@@ -36,15 +36,15 @@ class LandingPage extends Component {
         <div className="login">
           <div className="container">
             {isLogginActive && (
-              <Login containerRef={ref => (this.current = ref)} />
+              <Login containerRef={(ref) => (this.current = ref)} />
             )}
             {!isLogginActive && (
-              <Register containerRef={ref => (this.current = ref)} />
+              <Register containerRef={(ref) => (this.current = ref)} />
             )}
           </div>
-          <RightSideComponent
+          <RightSide
             current={current}
-            containerRef={ref => (this.rightSide = ref)}
+            containerRef={(ref) => (this.rightSide = ref)}
             onClick={this.changeState.bind(this)}
           />
         </div>
@@ -53,7 +53,7 @@ class LandingPage extends Component {
   }
 }
 
-const RightSideComponent = props => {
+const RightSide = (props) => {
   return (
     <div
       className="right-side"
