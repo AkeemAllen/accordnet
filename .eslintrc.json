@@ -20,6 +20,7 @@
     "linebreak-style": "off",
     "require-jsdoc": "off",
     "no-unused-vars": "off",
-    "indent": "off"
+    "indent": "off",
+    "no-trailing-spaces": "off"
   }
 }

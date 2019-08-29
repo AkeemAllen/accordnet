@@ -8,5 +8,6 @@
   "bracketSpacing": false,
   "jsxBracketSameLine": false,
   "proseWrap": "always",
-  "arrowParens": "always"
+  "arrowParens": "always",
+  "htmlWhitespaceSensitivity": "css"
 }
