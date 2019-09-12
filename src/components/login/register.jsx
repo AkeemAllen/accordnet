@@ -20,7 +20,7 @@ export class Register extends Component {
 
   handleSubmit() {
     const {username, password, email} = this.state;
-    axios.post('https://localhost:5001/api/auth/register', {
+    axios.post('https://localhost:44307/api/auth/register', {
       username,
       password,
       email,
@@ -118,9 +118,11 @@ export class Register extends Component {
                     : 'inputSuccess'
                 }
               />
-              {/* <div className="error">
-                {formErrors.username == 'Name is too short' ? 'Name is too short' : ''}
-              </div> */}
+              <div className="error">
+                {formErrors.username == 'Name is too short'
+                  ? 'Name is too short'
+                  : ''}
+              </div>
             </div>
             <div className="form-group">
               <input

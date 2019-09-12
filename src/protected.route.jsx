@@ -26,11 +26,16 @@ const unProtectedRoutes = [
 ];
 const AdminRoutes = ['configuration', 'permissions'];
 
+const loggedIn = false;
+
 const ProtectedRoute = ({component: Component, ...rest}) => {
   return (
     <Route
       {...rest}
       render={(props) => {
+        // if (!loggedIn) {
+        //   return <Redirect to="/register/"/>;
+        // }
         return <Component {...props} />;
       }}
     />
